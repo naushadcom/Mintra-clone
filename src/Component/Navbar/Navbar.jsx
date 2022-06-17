@@ -19,7 +19,7 @@ import { FilterContext } from "../../context/FilterContext";
 const MainDiv = styled.div`
   display: grid;
   grid-template-columns: 100px 500px 500px 200px;
-  background-color: whitesmoke;
+  background-color: white;
   justify-content: space-around;
   height: 80px;
   box-shadow: 0 4px 12px 0 rgb(0 0 0 / 5%);
@@ -48,7 +48,7 @@ const searchBar = {
   display: "flex",
   marginTop: "25px",
   paddingLeft: "80px",
-  backgroundColor: "whitesmoke",
+  backgroundColor: "white",
 };
 function Navbar() {
   const navigate = useNavigate()
@@ -76,10 +76,10 @@ function Navbar() {
           <NavLink to="/beauty" style={linkStyle}> BEAUTY</NavLink>
           <NavLink to="/studio" style={linkStyle}> STUDIO</NavLink> */}
             <ul>
-              <li className={styles.dropdown}>
+              <li className={styles.dropdown}  >
                 <Link to="/men" className={styles.dropbtn} style={linkStyle}>
                   {/* <a href="" className={styles.dropbtn} style={linkStyle} >MEN</a> */}
-                  MEN
+                 <div style={{fontWeight:"bold"}}>MEN</div> 
                 </Link>
                 <div className={styles.dropdownContent}>
                   <div
@@ -100,7 +100,7 @@ function Navbar() {
                         fontStyle: "1px",
                       }}
                     >
-                      <div style={{ color: "red" }}>Topwear</div>
+                      <div style={{ color: "red"}}>Topwear</div>
                       <div> T-Shirts </div>
                       <div>Casual Shirts</div>
                       <div>Formal Shirts</div>
@@ -238,7 +238,7 @@ function Navbar() {
               <li className={styles.dropdown}>
                 <Link to="/women" className={styles.dropbtn} style={linkStyle}>
                   {/* <a href="" className={styles.dropbtn} style={linkStyle} >MEN</a> */}
-                  WOMEN
+                 <div style={{fontWeight:"bold"}}>WOMEN</div> 
                 </Link>
                 {/* <a href="" className={styles.dropbtn} style={linkStyle}>
                   WOMEN
@@ -392,7 +392,7 @@ function Navbar() {
               </li>
               <li className={styles.dropdown}>
                 <a href="" className={styles.dropbtn} style={linkStyle}>
-                  KIDS
+                  <div style={{fontWeight:"bold"}}>KIDS</div>
                 </a>
                 <div className={styles.dropdownContent}>
                   <div
@@ -539,7 +539,7 @@ function Navbar() {
               </li>
               <li className={styles.dropdown}>
                 <a href="" className={styles.dropbtn} style={linkStyle}>
-                  HOME & LIVING
+                <div style={{fontWeight:"bold"}}>HOME & LIVING</div>  
                 </a>
                 <div className={styles.dropdownContent}>
                   <div
@@ -697,7 +697,7 @@ function Navbar() {
               </li>
               <li className={styles.dropdown}>
                 <a href="" className={styles.dropbtn} style={linkStyle}>
-                  BEAUTY
+                <div style={{fontWeight:"bold"}}>BEAUTY</div>   
                 </a>
                 <div className={styles.dropdownContent}>
                   <div
@@ -846,7 +846,7 @@ function Navbar() {
               </li>
               <li className={styles.dropdown}>
                 <a href="" className={styles.dropbtn} style={linkStyle}>
-                  STUDIO
+                <div style={{fontWeight:"bold"}}>STUDIO</div> 
                 </a>
                 <div className={styles.dropdownContent}>
                   <div style={{ width: "600px", textAlign: "center" }}>
@@ -879,9 +879,11 @@ function Navbar() {
           <div style={searchBar}>
             <div
               style={{
-                backgroundColor: "#FFFFFF",
-                height: "20px",
-                marginTop: "2px",
+                backgroundColor: "whitesmoke",
+                height: "32px",
+                paddingTop: "8px",
+                paddingLeft:"9px",
+                paddingRight:"20px",
               }}
             >
               <SearchIcon />
@@ -891,11 +893,12 @@ function Navbar() {
                 type="text"
                 placeholder="Search for products brands and more"
                 style={{
-                  width: "300px",
-                  height: "22px",
-                  background: "white",
+                  width: "400px",
+                  height: "38px",
+                  background: "whitesmoke",
                   marginTop: "0px",
                   border: "none",
+                  borderRadius:"3px"
                 }}
               ></input>
             </div>
